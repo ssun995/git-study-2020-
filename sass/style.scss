@@ -1,4 +1,4 @@
-$base-color: #1c4c8a;
+/*$base-color: #1c4c8a;
 $border-dark: rgba($base-color, 0.88);
 
 .alert {
@@ -6,4 +6,49 @@ $border-dark: rgba($base-color, 0.88);
   width: 200px;
   height: 200px;
   background-color: pink;
+}
+
+@import '_normalize.scss';*/
+
+$theme-primery: #296897;
+$theme-secondary: #c7c7c7;
+
+
+/* extend ************/
+%theme-color {
+  color: aqua;
+}
+
+/* mixin ************/
+@mixin reset-list(){
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+@mixin clearfix {
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.header {
+  background-color: $theme-secondary;
+  @extend %theme-color;
+  &__brand {
+    color: $theme-primery;
+    @extend %theme-color;
+  }
+  &__member{
+    @include reset-list();
+    background-color: orange;
+    @include clearfix;
+    @extend %theme-color;
+    //width: 600px / 960px * 100%;
+    width: calc(30em + 100px);
+    li{
+      float: left;
+    }
+  }
 }

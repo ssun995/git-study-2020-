@@ -1,8 +1,40 @@
+/*$base-color: #1c4c8a;
+$border-dark: rgba($base-color, 0.88);
+
 .alert {
-  border: 5px solid rgba(28, 76, 138, 0.88);
+  border: 5px solid $border-dark;
   width: 200px;
   height: 200px;
   background-color: pink;
+}
+
+@import '_normalize.scss';*/
+/* extend ************/
+.header__member, .header__brand, .header {
+  color: aqua;
+}
+
+/* mixin ************/
+.header {
+  background-color: #c7c7c7;
+}
+.header__brand {
+  color: #296897;
+}
+.header__member {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  background-color: orange;
+  width: calc(30em + 100px);
+}
+.header__member::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header__member li {
+  float: left;
 }
 
 /*# sourceMappingURL=style.css.map */
