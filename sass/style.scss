@@ -1,0 +1,9 @@
+$base-color: #1c4c8a;
+$border-dark: rgba($base-color, 0.88);
+
+.alert {
+  border: 5px solid $border-dark;
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
