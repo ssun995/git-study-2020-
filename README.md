@@ -14,6 +14,6 @@
 - sass --watch sass:css (watch 상태)
 - sass 변수 ($변수명)
 - sass 중첩 (.header .brand{...})
-- sass mixin
-- sass extend
+- sass 믹스인 (mixin)
+- sass 확장 (extend:공통 스타일 추가 but, 남용은 금물!!)
 - sass module (파일의 유형별로 분류)
